@@ -1,0 +1,66 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masai School admission</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="#">Add Student</a>
+        <a href="#">Student Database</a>
+        <a href="#">Admitted</a>
+        <a href="#">Rejected</a>
+    </nav>
+    <h2>Fill this form for admission in Masai School</h2>
+
+     <div class="form-container">
+    <form id="admissionForm">
+      <input type="text" id="name" placeholder="Name" required />
+      <input type="email" id="email" placeholder="Email" required />
+      <input type="tel" id="phone" placeholder="Phone Number" required />
+      <!-- <select id="gender" required>
+        <option value="">Select Gender</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Other">Other</option>
+      </select>
+      <select id="course" required>
+        <option value="">Select Course</option>
+        <option value="Web-Development">Web-Development</option>
+        <option value="Data-Analytics">Data-Analytics</option>
+        <option value="UI-UX">UI-UX</option>
+      </select> -->
+      <button type="submit">Submit</button>
+      
+     </form>
+  </div>
+
+   <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Course</th>
+        <th>Gender</th>
+        <th>Phone No</th>
+        <th>Accept</th>
+        <th>Reject</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>uday</td>
+        <td>uday123@gmail.com</td>
+        <td>App devlaper</td>
+        <td>male</td>
+        <td>9876543210</td>
+        <td><button class="accept-btn" onclick="handleAccept(this)">Accept</button></td>
+        <td><button class="reject-btn" onclick="handleReject(this)">Reject</button></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <script src="script.js"></script>
+</body>
+</html>

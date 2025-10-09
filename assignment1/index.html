@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hospital - Doctor Records</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <h1>HOSPITAL - DOCTOR RECORDS</h1>
+  <div class="container">
+    <form id="doctorForm">
+      <input type="text" placeholder="Doctor Name" id="name" required />
+      <input type="number" placeholder="Doctor ID" id="docId" required />
+      <select id="specialization" required>
+        <option value="">Select Specialization</option>
+        <option value="Dermatologist">Dermatologist</option>
+        <option value="ENT">ENT</option>
+        <option value="COVID">COVID</option>
+      </select>
+      <input type="number" placeholder="Experience" id="experience" required />
+      <input type="email" placeholder="Email Address" id="email" required />
+      <input type="text" placeholder="Mobile Number" id="mobile" required />
+      <button type="submit">Submit</button>
+    </form>
+
+    <table id="doctorTable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Doctor ID</th>
+          <th>Specialization</th>
+          <th>Experience in years</th>
+          <th>Email address</th>
+          <th>Mobile Number</th>
+          <th>Role</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Records will be added here -->
+      </tbody>
+    </table>
+ </div>
+
+<script>
+    const form = document.getElementById('doctorForm');
+const table = document.querySelector('#doctorTable tbody');
+
+form.addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  const name = document.getElementById('name').value;
+  const docId = document.getElementById('docId').value;
+  const specialization = document.getElementById('specialization').value;
+  const experience = parseInt(document.getElementById('experience').value);
+  const email = document.getElementById('email').value;
+  const mobile = document.getElementById('mobile').value;
+
+  const role = experience > 5 ? 'Senior' : experience >= 2 ? 'Junior' : 'Trainee';
+
+  const row = document.createElement('tr');
+
+  row.innerHTML = `
+    <td>${name}</td>
+    <td>${docId}</td>
+    <td>${specialization}</td>
+    <td>${experience}</td>
+    <td>${email}</td>
+    <td>${mobile}</td>
+    <td>${role}</td>
+    <td><button class="delete-btn">Delete</button></td>
+  `;
+
+  table.appendChild(row);
+
+  row.querySelector('.delete-btn').addEventListener('click', () => {
+    table.removeChild(row);
+  });
+
+  form.reset();
+});
+</script>
+</body>
+</html>

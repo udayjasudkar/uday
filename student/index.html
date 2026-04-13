@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="container" class="main-container">
+        <h1 class="title primary-title">Student Registration</h1>
+        
+        <!-- Form Section -->
+        <section id="form-section" class="section form-section">
+            <h2 class="section-title">Registration Form</h2>
+            <form id="studentForm" class="registration-form">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required placeholder="Enter your email">
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required placeholder="Enter password">
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="age">Age:</label>
+                        <input type="number" id="age" name="age" min="16" max="100" required placeholder="Age">
+                    </div>
+                    <div class="form-group">
+                        <label for="dob">Date of Birth:</label>
+                        <input type="date" id="dob" name="dob" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <span class="label">Gender:</span>
+                    <div class="radio-group">
+                        <label><input type="radio" name="gender" value="male" required> Male</label>
+                        <label><input type="radio" name="gender" value="female" required> Female</label>
+                        <label><input type="radio" name="gender" value="other" required> Other</label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <span class="label">Skills (Select multiple):</span>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="skills" value="JavaScript"> JavaScript</label>
+                        <label><input type="checkbox" name="skills" value="Python"> Python</label>
+                        <label><input type="checkbox" name="skills" value="Java"> Java</label>
+                        <label><input type="checkbox" name="skills" value="C++"> C++</label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="course">Course:</label>
+                    <select id="course" name="course" required>
+                        <option value="">Select a course</option>
+                        <option value="web-dev">Web Development</option>
+                        <option value="data-science">Data Science</option>
+                        <option value="mobile-app">Mobile App Development</option>
+                        <option value="ai-ml">AI/ML</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="feedback">Feedback:</label>
+                    <textarea id="feedback" name="feedback" rows="4" placeholder="Enter your feedback..."></textarea>
+                </div>
+                
+                <div class="button-group">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="reset" class="btn btn-secondary">Reset</button>
+                </div>
+            </form>
+        </section>
+        
+        <!-- Basic Table -->
+        <section id="basic-table" class="section table-section">
+            <h2 class="section-title">Student List</h2>
+            <table id="studentsTable" class="data-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Course</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <!-- Data will be populated by JS -->
+                </tbody>
+            </table>
+        </section>
+        
+        <!-- Advanced Table -->
+        <section id="advanced-table" class="section table-section">
+            <h2 class="section-title">Advanced Student Summary</h2>
+            <table class="advanced-table">
+                <thead>
+                    <tr>
+                        <th rowspan="2">Department</th>
+                        <th colspan="2">Students</th>
+                        <th rowspan="2">Pass Rate</th>
+                    </tr>
+                    <tr>
+                        <th>Male</th>
+                        <th>Female</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Web Dev</td>
+                        <td>15</td>
+                        <td>10</td>
+                        <td>92%</td>
+                    </tr>
+                    <tr>
+                        <td>Data Science</td>
+                        <td>8</td>
+                        <td>12</td>
+                        <td>88%</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td><strong>Total</strong></td>
+                        <td><strong>23</strong></td>
+                        <td><strong>22</strong></td>
+                        <td><strong>90%</strong></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

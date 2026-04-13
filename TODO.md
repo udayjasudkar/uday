@@ -1,13 +1,11 @@
-# Portfolio Website + Resume Feature TODO
+# Task: Add Student Registration App to GitHub Repo Main Branch
 
-## Initial Setup
-- [x] Step 1: Create full index.html with HTML structure, inline CSS, JS.
-- [x] Step 2: Test preview (start index.html).
-- [x] Step 3: Mark complete.
+## Steps:
+- [x] 1. Create `uday/student_app/` directory and files: index.html, styles.css, script.js
+- [x] 2. `git -C uday add student_app/`
+- [x] 3. `git -C uday commit -m \"Add Student Registration app\"`
+- [x] 4. `git -C uday push origin main`
+- [ ] 5. Update README.md (optional)
+- [ ] 6. Mark task complete
 
-## Resume Feature
-- [x] Step 4: Add Resume nav link
-- [x] Step 5: Add Resume section with PDF iframe preview and download button
-- [x] Step 6: Style resume section and download button
-- [x] Step 7: Test download and preview functionality
-- [x] Step 8: Mark resume feature complete
+**Status: In progress**
